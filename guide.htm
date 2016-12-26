@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <link type="text/css" rel="stylesheet" href="./css/swiper.min.css"/>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        /*.swiper-container{*/
+            /*height: 100%;*/
+        /*}*/
+        .swiper-container{
+            height: 100%;
+        }
+        .parallax-bg{
+            position: absolute;
+            z-index: 0;
+            width: 146%;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+        }
+        .swiper-wrapper{
+           /*padding-bottom: 30%;*/
+        }
+        .swiper-slide{
+            margin-top: 50%;
+            /*padding-left: 2%;*/
+            background: rgba(255,255,255,.6);
+            height: 45%;
+        }
+        .swiper-slide>*{
+            padding-left: 5px;
+        }
+        .nobg{
+            background: space;
+        }
+		
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="parallax-bg" style="background-image:url('./images/06.jpg');" data-swiper-parallax="-30%" data-swiper-parallax-duration="1000"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-100" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">Slide 1</div>
+                <div class="subtitle" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">Subtitle</div>
+                <div class="text" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-100" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">Slide 2</div>
+                <div class="subtitle" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">Subtitle</div>
+                <div class="text" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="title" data-swiper-parallax="-100" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">Slide 3</div>
+                <div class="subtitle" data-swiper-parallax="-200" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">Subtitle</div>
+                <div class="text" data-swiper-parallax="-300" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                </div>
+            </div>
+            <div class="swiper-slide nobg">
+                <div class="title" data-swiper-parallax="-100" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><button style="height: 50px;width: 150px;background: #d0e9c6;margin: 45% 30%;border: none;border-radius:5px;box-shadow: 0px 0px 15px white" >开始进入旅程</button></div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/swiper.js"></script>
+    <script language="javascript">
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            //paginationClickable: true,
+            parallax: true,
+            speed: 600
+        });
+        $('button').on('tap',function(){
+            tishi('登陆成功','');
+        }).on('click',function(){
+            tishi('登陆成功','');
+        });
+
+        function hr(){
+            window.location.href='index.htm';
+        }
+
+        function tishi(content,url) {
+            var ht='<div class="zhezhao" style="position:fixed;z-index:9998;left: 0;right: 0;top: 0;bottom: 0;background: rgba(255,255,255,.6)"></div>';
+            var html = '<div class="xiaoxi none" id="msg" style="z-index:9999;left: 5%;width: 90%;position: fixed;background:none;top:50%;"> <p class="msg" style="background: none repeat scroll 0 0 #000; border-radius: 30px;color: #fff; margin: 0 auto;padding: 1.5em;text-align: center;width: 70%;opacity: 0.8;"></p></div>';
+            $(document.body).append(ht);
+            $(document.body).append(html);
+            $('.zhezhao').show();
+            $("#msg").show();
+            $(".msg").html(content);
+            if(url){
+                window.setTimeout("location.href='"+url+"'", 1500);
+            }else{
+                //setTimeout('$("#msg").fadeOut()', 1500);
+                setTimeout(function(){
+                    $("#msg").fadeOut();
+                    $('.zhezhao').fadeOut();
+                },1500)
+            }
+        }
+    </script>
+</body>
+</html>

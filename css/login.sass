@@ -1,0 +1,59 @@
+.user
+.pwd
+.userinp,.pwdinp
+  text-indent: 1em
+@mixin row
+  display: flex
+  flex-direction: row
+@mixin cent
+  justify-content: center
+  align-items: center
+//--------------------------------»¬¶¯------------------------------------------------------
+#swich
+  display: inline-block
+  width: 80px
+  height: 40px
+  border: 1px solid #666666
+  border-radius: 20px
+  .div
+    display: inline-block
+    height: 40px
+    width: 40px
+    border-radius: 100%
+    box-shadow: 0 0 5px #000
+    margin-left: 0
+    transition: margin 1s
+  #cb
+    display: none
+  #cb:checked + .div
+    background: #2a6496
+    margin-left: 40px
+
+//------------------------------µ¥Ñ¡--------------------------------------------------------
+
+
+.swich2
+  display: inline-block
+  margin-left: 20px
+  vertical-align: middle
+  & div
+    width: 20px
+    height: 20px
+    border: 1px solid #CCCCCC
+    border-radius: 5px
+    display: inline-block
+    @include row
+    @include cent
+
+  & input
+    display: none
+
+  & input:checked + div:after
+    content: ''
+    display: block
+    width: 10px
+    height: 5px
+    transform: rotate(-45deg)
+    border-left: 1px solid black
+    border-bottom: 1px solid black
+    box-sizing: border-box
